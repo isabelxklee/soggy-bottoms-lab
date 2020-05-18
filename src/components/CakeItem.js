@@ -1,20 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-const CakeItem = (props) => {
-  const callback = function(arg){
-    console.log("hhhheeeeeeyyyyy", arg)
-  }
-  return (
-    <div>
+class CakeItem extends Component {
+  render() {
+    let { name, category, imgURL } = this.props.cake
+
+    return (
       <div className="CakeItem">
-        { props.cake.name }
+        <h2>{name}</h2>
+        <p>Category: {category}</p>
+        <img src={imgURL} alt={name} />
       </div>
-      <div className="CakeBottomBun">
-        <button onClick={() => props.handleSelectCake(props.cake) }>Show</button>
-        <button onClick={() => props.handleDeleteCake(props.cake)}>Delete</button>
-      </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default CakeItem

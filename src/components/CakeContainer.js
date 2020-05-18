@@ -1,27 +1,21 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import CakeList from './CakeList'
+import CakeItem from './CakeItem'
 import CakeFilter from './CakeFilter'
 
-export default class CakeContainer extends Component {
+class CakeContainer extends Component {
+  render() {
+    let cakesArr = this.props.cakes.map((singleCake) => {
+      return <CakeList key = {singleCake.id} cake = {singleCake} />
+      // <CakeItem key = {singleCake.id} cake = {singleCake} />
+    }) 
 
-  state = {
-    cakeFilter: "All"
-  }
-
-  getCakeFilter = (selection) => {
-    this.setState({ cakeFilter: selection })
-  }
-
-  render(){
     return (
       <div className="CakeContainer">
-        <CakeFilter getCakeFilter={ this.getCakeFilter } />
-        <CakeList
-        handleDeleteCake={ this.props.handleDeleteCake }
-        cakeFilter={this.state.cakeFilter }
-        handleSelectCake={ this.props.handleSelectCake }
-        cakes={ this.props.cakes } />
+        { cakesArr }
       </div>
     )
   }
 }
+
+export default CakeContainer
