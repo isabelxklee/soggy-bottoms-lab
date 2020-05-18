@@ -18,7 +18,7 @@ json-server --watch db.json
 npm start
 ```
 
-This will setup the data on a server using restful routes at http://localhost:3001/cakes.
+This will setup the data on a server using restful routes at `http://localhost:3001/cakes`.
 
 Go to that url in your browser to view the data.
 
@@ -33,11 +33,11 @@ The category should display as a dropdown, with the default value set to the cat
 ## STEP 4: FILTER CAKES BY CATEGORY
 When a user changes the value of the select dropdown above the CakeList, the cakes displayed in the list should change accordingly:
 
-the 'All' option should display all cakes
-the 'Soggy Bottomed' option should display only Soggy Bottomed cakes
-the 'Firm Bottomed' option should display only Firm Bottomed cakes
-BONUS: CHANGE CAKE CATEGORY
-The cake category displays as a select dropdown in the CakeDisplay component. When a user changes the value of the dropdown, this change should persist.
+* the 'All' option should display all cakes
+* the 'Soggy Bottomed' option should display only Soggy Bottomed cakes
+* the 'Firm Bottomed' option should display only Firm Bottomed cakes
+* BONUS: CHANGE CAKE CATEGORY
+* The cake category displays as a select dropdown in the CakeDisplay component. When a user changes the value of the dropdown, this change should persist.
 
 For example, if a user changes the category of 'Autumn Wonder' from Firm Bottomed to Soggy Bottomed, then this change should still be reflected on the page upon refresh.
 
