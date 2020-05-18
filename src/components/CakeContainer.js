@@ -7,7 +7,6 @@ class CakeContainer extends Component {
   render() {
     let cakesArr = this.props.cakes.map((singleCake) => {
       return <CakeList key = {singleCake.id} cake = {singleCake} />
-      // <CakeItem key = {singleCake.id} cake = {singleCake} />
     }) 
 
     return (
